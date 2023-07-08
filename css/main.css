@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Hanken+Grotesk:wght@500;700;800&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Light-red : hsl(0, 100%, 67%) ;
+    --Orangey-yellow : hsl(39, 100%, 56%) ;
+    --Green-teal : hsl(166, 100%, 37%) ;
+    --Cobalt-blue : hsl(234, 85%, 45%) ;
+
+    
+    --Light-slate-blue-background : hsl(252, 100%, 67%) ;
+    --Light-royal-blue-background : hsl(241, 81%, 54%) ;
+
+    --Violet-blue-circle : hsla(256, 72%, 46%, 1) ; 
+    --Persian-blue-circle : hsla(241, 72%, 46% ) ;
+
+    --White : hsl(0, 0%, 100%) ;
+    --Pale-blue : hsl(221, 100%, 96%) ;
+    --Light-lavender : hsl(241, 100%, 89%) ;
+    --Dark-gray-sblue : hsl(224, 30%, 27%) ;
+}
+body {
+    font-size: 18px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: var(--Pale-blue);
+}
+.component {
+    width: 620px;
+    height: 420px;
+    border-radius: 25px;
+    background-color: var(--White) ;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+}
+.component .left-content {
+  background-image: linear-gradient(to top , var(--Light-royal-blue-background)  , var(--Light-slate-blue-background));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: inherit;
+  padding: 15px 25px;
+}
+.component .left-content h1 {
+    color: var(--Light-lavender);
+    font-weight: 500;
+    font-size: 16px;
+}
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: linear-gradient(to top , hsl(246.37deg 89.05% 60.59%), hsl(249.71deg 56.04% 49.28%) );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.circle h2 {
+    color: white;
+    font-size: 50px;
+}
+.circle {
+    font-size: 14px;
+    color: var(--Light-lavender);
+}
+.info {
+    text-align: center;
+}
+.info h2 {
+    color: var(--White);
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+.info p {
+    font-size: 14px;
+    font-weight: 500;
+    max-width: 210px;
+    line-height: 1.6;
+    color: var(--Light-lavender);
+}
+.right-content {
+   padding: 25px;
+}
+.right-content h2 {
+    color: var(--Dark-gray-sblue);
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.right-content .line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 13px;
+    border-radius: 7px;
+    font-size: 15px;
+}
+.right-content .line .percentage span:first-child {
+    padding-right: 4px;
+    font-weight: 800;
+    color: var(--Dark-gray-sblue);
+}
+.right-content .line .percentage span:last-child {
+    color:  hsl(242, 19%, 67%);
+}
+
+.right-content .one {
+    background-color: hsl(0, 100%, 67% , 10%) ;
+    color: var(--Light-red);
+}
+.right-content .two {
+    background-color: hsl(39, 100%, 56% ,10%);
+    color: var(--Orangey-yellow);
+}
+.right-content .three {
+    background-color: hsl(166, 100%, 37% , 10%) ;
+    color: var(--Green-teal);
+}
+.right-content .four {
+    background-color: hsl(234, 85%, 45% , 10%) ;
+    color: var(--Cobalt-blue);
+    margin-bottom: 30px;
+}
+.right-content .line img {
+    padding-right: 10px ;
+}
+.right-content .line .title {
+    display: flex;
+    align-items: center;
+}
+.right-content a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--White);
+    font-size: 17px;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 25px;
+    background-color: var(--Dark-gray-sblue);
+    transition: 0.3s;
+}
+.right-content a:hover {
+    background-color: var(--Violet-blue-circle);
+}
+@media ( max-width : 600px ) {
+
+    .component {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+    }
+    .component .left-content {
+        justify-content: space-between ;
+        border-radius: 0 0 50px 50px;
+    }
+    .component .left-content h1 , .circle , .info {
+        margin-bottom: 25px;
+    }
+    .info p {
+        max-width: 250px;
+    }
+
+}
